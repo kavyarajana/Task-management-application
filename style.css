@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 { text-align: center; color: #333; margin-bottom: 25px; }
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus { outline: none; border-color: #667eea; }
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover { background: #5568d3; }
+
+.note { text-align: center; color: #666; font-size: 14px; margin-top: 15px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: white;
+}
+
+.logout-btn {
+  width: auto;
+  padding: 10px 20px;
+  background: #ff4757;
+}
+
+.add-task { display: flex; gap: 10px; margin-bottom: 20px; }
+.add-task input { margin: 0; }
+.add-task button { width: auto; margin: 0; padding: 12px 25px; }
+
+.filters { display: flex; gap: 10px; margin-bottom: 20px; }
+.filter-btn {
+  flex: 1;
+  background: #f1f1f1;
+  color: #333;
+  margin: 0;
+}
+.filter-btn.active { background: #667eea; color: white; }
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  border-left-color: #2ed573;
+}
+
+.task-item.completed .task-text { text-decoration: line-through; }
+
+.task-text { flex: 1; margin: 0 15px; font-size: 16px; }
+
+.task-actions { display: flex; gap: 8px; }
+
+.task-actions button {
+  width: auto;
+  padding: 8px 15px;
+  margin: 0;
+  font-size: 14px;
+}

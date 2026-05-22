@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Kavya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="loginPage" class="page">
+    <div class="container">
+      <h1>Task Manager Login</h1>
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button onclick="login()">Login</button>
+      <p class="note">Note: Use any username/password for demo</p>
+    </div>
+  </div>
+
+  <!-- Task Manager Page -->
+  <div id="taskPage" class="page" style="display:none;">
+    <div class="header">
+      <h1>Welcome, <span id="userDisplay"></span>!</h1>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+
+    <div class="container">
+      <div class="add-task">
+        <input type="text" id="taskInput" placeholder="Enter new task...">
+        <button onclick="addTask()">Add Task</button>
+      </div>
+
+      <div class="filters">
+        <button onclick="filterTasks('all')" class="filter-btn active">All</button>
+        <button onclick="filterTasks('pending')" class="filter-btn">Pending</button>
+        <button onclick="filterTasks('completed')" class="filter-btn">Completed</button>
+      </div>
+
+      <div id="taskList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
